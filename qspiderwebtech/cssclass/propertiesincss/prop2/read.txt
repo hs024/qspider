@@ -1,0 +1,41 @@
+background prop
+1.background-color
+2.background-image:
+        i.url()
+        ii.lineragradient(direction,color,color,......color)
+        iii.radial-gradient()
+        iv.conicgradient()
+
+        lineragradient  
+           i. stabdard value of d 
+            to bottom  default 
+            to left
+            to right
+            to top
+            to top left
+            to top right 
+            to bottom right 
+            to bottom left  
+           ii. degree value 
+            180 deg  90 deg 270 deg 
+            45 deg 135 deg also negative 
+           iii. turn value
+           1 turn 2 turn
+           1 turn to top 
+
+
+
+
+
+
+
+
+
+
+
+
+        url  
+        1.auto    
+        2.cover
+        3.contain
+        4.width and height

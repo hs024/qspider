@@ -1,0 +1,11 @@
+/* .test{
+    color:red;
+} */
+
+article +section +section >main{
+    color:blue;
+}
+article +section>aside>p{
+    color:green;
+}
+

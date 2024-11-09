@@ -1,0 +1,101 @@
+/* not visited state
+a:link{
+    color: orange;
+}
+
+a:visited{
+    color:crimson
+}
+a:active{
+    color: gold;
+}
+
+
+a:hover{
+    text-decoration: none;
+} */
+
+nav {
+  background-color: black;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a {
+  color: white;
+  padding: 2px;
+  justify-content: center;
+  margin: auto;
+}
+nav a:hover {
+  text-decoration: none;
+}
+/* 
+nav a:first-child:hover + a{
+color: red;
+}
+
+nav a:last-child:hover + nav {
+    color:blue;
+}
+
+nav a:first-child:hover ~ a:last-child{
+    color: blue;
+}
+
+nav a:last-child:hover ~ .fb{
+    color:green;
+}
+nav a:last-child:hover ~ a:first-child{
+    color: aquamarine;
+} */
+
+nav input {
+  padding: 2px;
+  margin: 1px;
+  border: none;
+  margin-right: 0px;
+  outline: none;
+}
+nav button {
+  background-color: blue;
+  color: aliceblue;
+  padding: 2px;
+  border: none;
+  margin: 1px;
+  margin-left: 0px;
+}
+
+nav input:focus {
+  caret-color: red;
+  background-color: antiquewhite;
+  outline: red solid 2px;
+}
+div input {
+  accent-color: red;
+}
+div input:focus {
+  accent-color: red;
+}
+
+:is(){
+    background-color: rebeccapurple;
+}
+/* 
+div:has(p){
+    background-color: aqua;
+} */
+/* 
+div:where(input){
+    background-color: brown;
+}
+div:has(.p1){
+    color: aquamarine;
+}
+div:not(.p1){
+    color: blue;
+} */
+div:has(p:not(.p1)){
+    color:magenta;
+}

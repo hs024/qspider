@@ -1,0 +1,37 @@
+/* div[title="div1"]{
+    color: aquamarine;
+} */
+/* div[class^="c1"]{
+    color:mediumpurple
+}
+
+button[type="submit"]{
+    background-color: blue;
+} */
+/* 
+div[class$="m2"]{
+    color:blue
+} */
+
+/* 
+div[class~="flex"]{
+    color:orange;
+} */
+
+
+/* 
+
+p[class="flex"]{
+    color: crimson;
+} */
+
+p.flex{
+    color: crimson;
+}
+
+div#f{
+    color: aquamarine;
+}
+
+
+

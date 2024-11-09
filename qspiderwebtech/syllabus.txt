@@ -1,0 +1,66 @@
+git -v 
+git -version 
+git 
+-------------------------------------------------------------------------------------------------------
+global configuration 
+config --global  user.name "name"
+config --global  user.email  "email"
+git config --global core.editor "code --wait" 
+git config --global core.autocrlf true 
+
+edit global configuration  
+git config --global -e
+
+-------------------------------------------------------------------------------------------------------
+
+git commit --amend -m "coome"    recent commit comment change
+-------------------------------------------------------------------------------------------------------
+change branch name  to main
+git branch -M main
+-------------------------------------------------------------------------------------------------------
+
+git branch feature/test
+-------------------------------------------------------------------------------------------------------
+check all branches
+git branch
+
+git switch branch    							to switch
+-------------------------------------------------------------------------------------------------------
+
+type of merge
+fast forward merge
+3way merge 
+rebase merge
+
+
+git merge feature/test
+
+
+
+branch delete
+git branch -d branchname
+
+
+-------------------------------------------------------------------------------------------------------
+latest commit  of main  
+point where branch made 
+latest of new branch
+compare them then add
+called 3way merge 
+
+-------------------------------------------------------------------------------------------------------
+history of commits
+git checkout commitid
+got head to this commit
+back to  latest    
+git checkout branch 
+-------------------------------------------------------------------------------------------------------
+
+reset the branch
+3 commands here
+git reset --mixed   commitid                                    back to untrack chnage
+git reset --soft 						back to staged change
+git reset --hand						delete the change
+git reset --mixed head~1                                        back head number time   uncommit abovethem
+-------------------------------------------------------------------------------------------------------
+upload to git hub

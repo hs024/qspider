@@ -1,0 +1,40 @@
+div{
+    color: lightblue;
+
+}
+
+
+div::first-line{
+    color:#ff0000;
+    color: #00ff00;
+    color: #ffff00;
+    color:#00ffff;                   /*cyan*/
+    color: #ff00ff;                     /* magenta*/
+    font-size: 18px;
+    font-weight: 600;
+    color: hsl(61, 43%, 45%);
+} 
+
+
+
+
+div::first-letter{
+    color:#ffffff;
+    color:#000000;
+    font-size: 40px;
+    font-weight: bold;
+    color: hwb(0 18% 34%);
+
+}
+
+
+div::selection{
+    color: #00ff00;
+    background-color: aquamarine;
+}
+
+
+
+
+
+

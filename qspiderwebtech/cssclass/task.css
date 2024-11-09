@@ -1,0 +1,14 @@
+article >p:first-child{
+    color:red;
+}
+/* article >p:last-of-type{
+    color:blue;
+} */
+article >span:last-child{
+    color: aqua;
+}
+
+
+article >p:nth-last-of-type(32){
+    color: blueviolet;
+}

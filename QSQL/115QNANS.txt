@@ -1,0 +1,251 @@
+1.
+ SELECT * FROM EMP WHERE 
+ DEPTNO IN (SELECT DEPTNO FROM DEPT WHERE 
+ DNAME LIKE '%S');
+
+ EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+------ ---------- --------- ---------- --------- ---------- ----------
+DEPTNO
+------
+  7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+    30
+
+  7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+    30
+
+  7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+    30
+
+
+ EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+------ ---------- --------- ---------- --------- ---------- ----------
+DEPTNO
+------
+  7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+    30
+
+  7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0
+    30
+
+  7900 JAMES      CLERK           7698 03-DEC-81        950
+    30
+
+---------------------------------------------------------------------------------------------------------------
+
+2 
+  SELECT * FROM EMP WHERE 
+  SAL IN (SELECT MAX(SAL) FROM EMP WHERE 
+  DEPTNO IN (SELECT DEPTNO  FROM DEPT WHERE
+   DNAME IN 'ACCOUNTING'));
+
+ EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+------ ---------- --------- ---------- --------- ---------- ---------- ----------
+  7839 KING       PRESIDENT            17-NOV-81       5000                    10
+
+ ---------------------------------------------------------------------------------------------------------------
+
+
+3.
+SQL>  SELECT DNAME FROM DEPT 
+  2   WHERE
+  3   DEPTNO IN (
+  4   SELECT DEPTNO FROM EMP WHERE COMM
+  5  IN (SELECT MAX(COMM) FROM EMP ));
+
+DNAME
+--------------
+SALES
+
+
+---------------------------------------------------------------------------------------------------------------
+5.
+
+SQL> SELECT ENAME FROM EMP WHERE
+  2  DEPTNO IN (SELECT DEPTNO FROM EMP WHERE ENAME IN 'SCOTT');
+
+ENAME
+----------
+FORD
+ADAMS
+SCOTT
+JONES
+SMITH
+---------------------------------------------------------------------------------------------------------------
+8.
+
+SQL> SELECT DNAME FROM DEPT 
+  2  WHERE 
+  3  DEPTNO IN (
+  4  SELECT DEPTNO FROM EMP
+  5  WHERE JOB IN (SELECT JOB FROM EMP 
+  6  WHERE JOB ='SALESMAN'
+  7  GROUP BY JOB 
+  8  HAVING COUNT(*)>=3));
+
+DNAME
+--------------
+SALES
+
+---------------------------------------------------------------------------------------------------------------
+9.
+
+SQL> SELECT DNAME FROM DEPT 
+  2  WHERE
+  3  DEPTNO IN 
+  4  (SELECT DEPTNO FROM EMP 
+  5  WHERE MGR IS NULL);
+
+DNAME
+--------------
+ACCOUNTING
+
+
+---------------------------------------------------------------------------------------------------------------
+13.
+
+SQL> select loc from dept where 
+  2  DEPTNO IN (
+  3  SELECT DEPTNO FROM EMP 
+  4  WHERE SAL IN (SELECT MIN(SAL) FROM EMP WHERE SAL>2000));
+
+LOC
+-------------
+NEW YORK
+
+
+---------------------------------------------------------------------------------------------------------------
+15
+SQL>  SELECT LOC FROM DEPT 
+  2   WHERE
+  3   DEPTNO IN 
+  4   (SELECT DEPTNO FROM EMP 
+  5  GROUP BY DEPTNO 
+  6  HAVING COUNT(*)>4);
+
+LOC
+-------------
+CHICAGO
+
+
+---------------------------------------------------------------------------------------------------------------
+17.
+
+
+SQL>  SELECT ENAME FROM EMP
+  2   WHERE
+  3   DEPTNO IN (SELECT DEPTNO FROM DEPT 
+  4    WHERE
+  5    LOC  IN (SELECT LOC FROM DEPT 
+  6    WHERE DEPTNO IN (
+  7    SELECT DEPTNO FROM EMP WHERE 
+  8    EMPNO IN (SELECT MGR FROM EMP WHERE ENAME IN 'ADAMS'))));
+
+ENAME
+----------
+FORD
+ADAMS
+SCOTT
+JONES
+SMITH
+
+---------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+29   
+> SELECT * FROM EMP WHERE 
+  MGR NOT IN (SELECT EMPNO FROM EMP WHERE JOB='PRESIDENT')
+  AND COMM >=0 AND SAL>(SELECT MAX(SAL) FROM EMP WHERE JOB ='CLERK');
+
+  EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+------- ---------- --------- ---------- --------- ---------- ---------- ----------
+   7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+   7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+
+-----------------------------------------------------------------------------------------------------------
+30
+SQL>  SELECT * FROM EMP
+  2   WHERE HIREDATE>730 +(SELECT MIN(HIREDATE) FROM EMP)
+  3   AND SAL>(SELECT SAL FROM EMP WHERE ENAME IN 'BLAKE');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+
+------------------------------------------------------------------------------------------------------------
+31
+SQL> SELECT LOC FROM DEPT WHERE 
+  2  DEPTNO IN ( SELECT DEPTNO FROM EMP WHERE MGR IN 
+  3  (SELECT EMPNO FROM EMP WHERE ENAME IN 'BLAKE'));
+
+LOC
+-------------
+CHICAGO
+---------------------------------------------------------------------------------------------------------
+32
+SQL> SELECT * FROM EMP WHERE 
+  2  JOB IN (SELECT JOB FROM EMP WHERE ENAME IN 'JONES')
+  3  AND SAL<(SELECT SAL FROM EMP WHERE ENAME IN 'SCOTT');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+---------------------------------------------------------------------------------------------------------------
+
+33
+
+SQL> SELECT EMP.*, SAL * 12 AS Annual_Salary
+  2  FROM EMP
+  3  WHERE DEPTNO IN (20, 30) 
+  4    AND DEPTNO IN (
+  5        SELECT DEPTNO
+  6        FROM EMP
+  7        WHERE DEPTNO IN (20, 30)
+  8        GROUP BY DEPTNO
+  9        HAVING COUNT(*) > 3
+ 10    );
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO ANNUAL_SALARY
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- -------------
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30         11400
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30         18000
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30         34200
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30         15000
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30         15000
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30         19200
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20         36000
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20         13200
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20         36000
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20         35700
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20          9600
+
+11 rows selected.
+
+
+
+

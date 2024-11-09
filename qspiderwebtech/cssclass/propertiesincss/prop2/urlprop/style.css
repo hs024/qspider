@@ -1,0 +1,26 @@
+.container {
+  height: 300px;
+  width: 400px;
+  border: 3px solid black;
+  margin: auto;
+  /* background-image: url("g.jpg"); */
+  /* background-size: 300px 400px;   //if small then it show repeated
+    background-size: 100% 100%;
+    background-repeat: no-repeat;     //3 val repeatx   repeaty   no-repeat */
+  /* background-size: 10px 20px; */
+
+  /* background-repeat: repeat-x; */
+  /* background-repeat: no-repeat; */
+  /* background-image: url("g.jpg"); */
+  /* background-position: center top; */
+  /* always give two value like center center  */
+  /* background-position: left top bottom right ; */
+  /* background-position: 10px 30px; */
+  /* top 10px left 30px */
+background-image: url('wp.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+.container:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 30%,transparent,rgba(0, 0, 0, 0.776) 70%),url('wp.jpg');
+}

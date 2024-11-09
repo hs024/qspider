@@ -1,0 +1,86 @@
+/* div::first-letter{
+    color: red;
+    font-style: italic;
+    font-size: 35px;
+}
+div{
+    display: inline-block;
+}
+
+p::first-line{
+color: tomato;
+font-size: 30px;
+}
+
+p::selection{
+color: aquamarine;
+background-color: rgba(0, 255, 255, 0.228);
+}
+
+
+
+
+
+
+
+ */
+
+/* 
+
+
+
+
+ul>li:first-child::marker{
+    content: "Hs ";
+}
+
+
+ ul>li::marker{
+    content: "@ ";
+    font-size: 30px;
+ }
+
+
+
+ ol>li:nth-child(even)::marker{
+    content:"🤦‍♀️🤦‍♂️ "
+ }
+ 
+ ol>li:nth-child(odd)::marker{
+    content:"👏 "
+ }
+
+ 
+ ol>li:nth-last-child(2)::marker,ol>li:nth-last-child(4)::marker{
+    content:"🐱‍🐉 "
+ }
+
+  */
+
+
+  ul>li:nth-child(even)::marker{
+    content:"💖"
+  }
+  
+  ul>li:nth-child(odd)::marker{
+    content:"✨ "
+  }
+
+  
+  ul>li:last-child::marker{
+    content:"😎";
+    background-image: url("pexels-pixabay-414144.jpg");
+  }
+
+
+  div::before{
+    content: "ironman    ";
+  }
+  div::after{
+    content: "baccha";
+  }
+
+
+  
+
+
