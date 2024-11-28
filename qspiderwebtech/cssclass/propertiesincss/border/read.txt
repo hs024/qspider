@@ -1,0 +1,35 @@
+border  
+border-width
+border-style       solid double dotted dashed grove  
+border-color 
+
+
+border   2px solid black
+
+border-top 
+border-left
+border-right
+border -bottom 
+border bottom
+
+
+
+border-radius:
+border-top-left-radius:
+
+
+
+boder-radius:topleft  topright
+             bottomright  bottomleft
+
+
+bottom-r:topleft  topright   bottomright
+                  botomleft
+
+
+
+bottom   _   _   _  _  
+
+
+
+fancy border radius 

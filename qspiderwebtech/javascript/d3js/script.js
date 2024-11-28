@@ -96,18 +96,45 @@
 
 // namep()()  //js currying 
 
-function father()
-{
-    var a=10
-    function chilid(){
-        var b=5
-        console.log(a+b);
+// function father()
+// {
+//     var a=10
+//     function chilid(){
+//         var b=5
+//         console.log(a+b);
         
-    }
-    return chilid
+//     }
+//     return chilid
+// }
+
+// var x=father()
+// x()
+// console.log(x())
+
+
+// iife   immediately invaoke fn expression 
+function test (a,b) {
+    return a+b 
 }
 
-var x=father()
-x()
-// console.log(x())
+
+let a=test(10,20)
+console.log(a)
+
+let z=(function(){
+    var a=10 
+    var b=20
+    return a+b
+})()
+
+console.log(z)
+
+
+
+let k=()=>{
+    console.log(50)
+}
+
+
+
 

@@ -1,0 +1,57 @@
+1 display flex
+
+2 flex diraction row cloumn 
+default properrty   already apply value with row
+
+3 flex wrap 
+nowrap
+ wrap 
+wrap-reverse
+
+
+
+4 flex flow  :-     flex direction and wrap 
+
+
+5 gap :- row gap column gap 
+
+
+6 justify content 
+flex start 
+flex end 
+center
+space between
+space even
+space around
+
+
+7 align item :-
+stretch 
+flex end
+flex start 
+center
+
+8 align content :-
+stretch 
+flex start 
+flex end 
+center 
+space between 
+space around 
+space none    
+
+when we use einline flex we can use the property of the binline but all inside another to it in the inside it i s gone take all the prop of the flex in it but it act as a s a inline allement to the parent of it 
+
+------------------------------------------
+9.flex items property:-
+
+flex-basis:-
+with respect to main axis it use px 
+
+order:-number
+
+align-self:four value of laign 
+
+flex-grow:0 1
+
+flex-shrink:1 2 3 4 

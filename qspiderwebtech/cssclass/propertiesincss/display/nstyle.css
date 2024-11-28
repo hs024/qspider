@@ -1,0 +1,28 @@
+*,*::before ,*::after{
+box-sizing: border-box;
+}
+*{
+margin:0 ; 
+padding:0;
+}
+body {
+height :100vh; 
+width :100vw;
+  font-family: Arial, sans-serif;
+}
+
+.head{
+    box-shadow: 2px 2px 5px rgb(222, 214, 214);
+    height: 10%;
+    /* background-color: black; */
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px 5px;
+    /* align-items: str; */
+}

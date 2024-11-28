@@ -1,0 +1,12 @@
+font size     default 16px     some relative units
+font weight    normal default bold light semi-bold 
+font style      normal italic obique
+font family   generic font family monospace  sarif 
+
+dafont website for font    
+google font 
+
+@font-family{
+    font-family:nameof font in url ;
+    src:url();
+}

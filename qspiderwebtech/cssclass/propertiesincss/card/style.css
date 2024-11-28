@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+}
+
+.product-container {
+  background-color: pink;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;    //! apply to parent when we give margin to child parent even move
+
+}
+.product-card {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  padding-inline: 15px;
+  margin: 15px auto;
+  border: 5px groove black;
+      border-top-right-radius: 70px;
+    border-bottom-left-radius:50px ;
+    overflow: hidden;
+
+}
+
+.product-img {
+  height: 200px;
+  width: 95%;
+}
+
+.product-img img {
+  margin-top: 15px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid;
+}
+
+.product-card h3 {
+  padding: 5px;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 10px;
+}
+.product-card p {
+  text-align: center;
+}
+.product-card button {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: blue;
+  width: 350px;
+  color: white;
+  margin-left: 7px;
+  margin-top: 10px;
+  border: none;
+}

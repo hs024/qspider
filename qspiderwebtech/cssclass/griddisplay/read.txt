@@ -1,0 +1,31 @@
+grid container
+grid lines
+grid column lines 
+grid row lines 
+track
+grid area
+grid cell
+
+
+display:grid 
+or inline grid 
+grid-templates-rows:100px 100px 100px repeat(__,__)
+grid-templates-columns:
+gap: rowgap columngap
+justify-content: stretch start end center space-between space-evenly space -around 
+align-content: stretch  flex-end flex-start center space-around space-between space-evenly 
+justify-items:
+align-items:stretch flex-start flex-end center  
+
+place-content: aligncontent justify content;
+
+
+
+propertie for the items to start and end from the place 
+grid-colum-start:number of column and the row
+grid-colum-end
+grid-row-start
+grid-row-end
+
+
+

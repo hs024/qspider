@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="5">
+      <tr>
+        <th>slice</th>
+        <th>splice</th>
+      </tr>
+      <tr>
+        <td>2 argument start end index</td>
+        <td>3argument start deletecount addelement</td>
+      </tr>
+      <tr>
+        <td>extract the value and return it</td>
+        <td>delete the value and return it</td>
+      </tr>
+      <tr>
+        <td>not modify the original array</td>
+        <td>effect original array</td>
+      </tr>
+      <tr>
+        <td>op [20,30] slice (1,3) arr / in=[10,20,30,40,50] same</td>
+        <td>op [20,30] splice(1,2) arr=[10,0,40,50] splice(1,2,0)</td>
+      </tr>
+    </table>
+    <div>
+      <h1>higher order fn in array</h1>
+      all need a callback fn
+      <ol>
+        <li>foreach</li>
+        <li>map</li>
+        <li>find</li>
+        <li>filter</li>
+        <li>reduce</li>
+      </ol>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

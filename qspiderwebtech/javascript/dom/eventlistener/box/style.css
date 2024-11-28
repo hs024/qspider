@@ -1,0 +1,23 @@
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    height:500px;
+    width:500px;
+    border: 2px solid black;
+}
+.section{
+    height:300px;
+    width:300px;
+        border: 2px solid black;
+
+}
+
+.article{
+        border: 2px solid black;
+height:100px;
+    width:100px;
+}

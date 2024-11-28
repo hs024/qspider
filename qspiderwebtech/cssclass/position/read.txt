@@ -1,0 +1,16 @@
+position 
+static 
+relative
+absolute
+fixed
+sticky
+
+
+
+prop:
+left right
+bottom  top
+z-index
+
+
+designer tool extension in chrome

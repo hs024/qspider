@@ -1,0 +1,84 @@
+*,*::before ,*::after{
+box-sizing: border-box;
+}
+*{
+margin:0 ; 
+padding:0;
+border: 1px solid black;
+}
+body {
+height :100vh; 
+width :100vw;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+}
+
+main{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+header{
+    background-color: aliceblue;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1/4;
+}
+h1{
+    border: 0px;
+}
+section{
+    background-color: antiquewhite;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column:1/3;
+    background-image: linear-gradient(to right,red,pink,blue);
+    /* color: transparent; */
+    /* -webkit-background-clip: text; */
+}
+menu{
+    background-color: aqua;
+    font-size: 15px;
+    padding: 5px;
+
+}
+content{
+    background-color: aquamarine;
+}
+aside{
+    background-color: rgb(23, 70, 221);
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+    grid-row: 2/4;
+    grid-column: 3/4;
+    background-image: url("./japan-background-digital-art (1).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer{
+    background-color: black;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+

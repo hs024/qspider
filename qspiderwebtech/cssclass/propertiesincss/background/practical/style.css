@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    margin: 2px;
+    height: 1000px;
+
+}
+header{
+    background-color: black;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header a{
+    color: aliceblue;
+    text-decoration: none;
+    margin: auto;
+}
+
+section{
+    height: 80%;
+    background-color: rgba(34, 56, 115, 0.632);
+}
+.wrapper{
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    border: 5px solid black;
+    margin: auto;
+    margin-top: 1px;
+
+background-image: linear-gradient(45deg,#2225d3 25%,rgb(254, 164, 179) 80%,rgba(226, 23, 23, 0.779) 20%);
+background-image: linear-gradient(-45deg,red,blue);
+
+}
+.w2{
+    border: 5px solid black;
+    height:200px;
+    width:200px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+    background-image: linear-gradient(rgb(246, 207, 116) 25%,rgb(203, 246, 116),blue 60%,yellow 80%);
+}
+.w3{
+    border: 5px solid black;
+    height:200px;
+    width:200px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+    background-image: linear-gradient(blue 10%,green   10% 50%,red 50% 90%)
+    /* all are the starting point in the percentage of the color  */  
+    /* we can write two val in in percenteage that is tart and the emd  */
+}
+
+.tr{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    background-image: url("../g.jpg");
+    background-image: linear-gradient(red,green);
+}
